@@ -1,0 +1,125 @@
+/* style.css */
+
+/* Global styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+/* Center the game vertically and horizontally */
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Game board styles */
+.game-board {
+  margin-right: 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom right, #e5c0ea, #d0f8ea);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Square styles */
+.square {
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  animation: fadeIn 0.3s ease;
+}
+
+.square:hover {
+  background-color: #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add colors for X and O */
+.square.X {
+  color: #e91e63;
+}
+
+.square.O {
+  color: #4caf50;
+}
+
+/* Game status styles */
+.status {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #007bff;
+  animation: slideIn 0.5s ease;
+}
+
+/* Game moves styles */
+game-info {
+  max-width: 250px;
+}
+
+ol {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+  transition: background-color 0.3s;
+}
+
+li button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+li button:hover {
+  text-decoration: none;
+}
+
+/* Add background color on hover for the game moves */
+li:hover {
+  background-color: #f8f8f8;
+  border-radius: 5px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
